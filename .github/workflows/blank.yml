@@ -43,6 +43,8 @@ jobs:
           APPBUILDER_SECRET: ${{ secrets.APPBUILDER_SECRET }}
           APPBUILDER_ENV: ${{ vars.APPBUILDER_ENV }}
           APPBUILDER_REPO_SEC: ${{ secrets.APPBUILDER_REPO_SEC }}
+          APPBUILDER_REPO_VAR: ${{ vars.APPBUILDER_REPO_VAR }}
+          APPBUILDER_REPO_ENV: ${{ env.APPBUILDER_REPO_ENV }}
         run: |
           env
           echo "--------------------"
@@ -56,3 +58,7 @@ jobs:
           echo $ACCESS_TOKEN
           echo "APPBUILDER_REPO_SEC"
           echo $APPBUILDER_REPO_SEC
+          echo "APPBUILDER_REPO_VAR"
+          echo $APPBUILDER_REPO_VAR
+          echo "APPBUILDER_REPO_ENV"
+          echo $APPBUILDER_REPO_ENV
