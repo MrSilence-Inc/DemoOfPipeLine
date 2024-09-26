@@ -58,3 +58,4 @@ jobs:
           echo $APPBUILDER_REPO_VAR
           echo "APPBUILDER_REPO_ENV"
           echo $APPBUILDER_REPO_ENV
+          echo "END"
