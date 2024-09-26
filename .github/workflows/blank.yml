@@ -20,7 +20,7 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     env:
-      APPBUILDER_TOKEN: my_token_1
+      APPBUILDER_TOKEN: my_token_2
       APPBUILDER_SECRET: ${{ secrets.APPBUILDER_SECRET }}
       APPBUILDER_ENV: ${{ vars.APPBUILDER_ENV }}
 
