@@ -21,6 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       APPBUILDER_TOKEN: my_token_2
+      ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -41,6 +42,7 @@ jobs:
         env:
           APPBUILDER_SECRET: ${{ secrets.APPBUILDER_SECRET }}
           APPBUILDER_ENV: ${{ vars.APPBUILDER_ENV }}
+          APPBUILDER_REPO_SEC: ${{ secrets.APPBUILDER_REPO_SEC }}
         run: |
           env
           echo "--------------------"
@@ -50,3 +52,7 @@ jobs:
           echo $APPBUILDER_SECRET
           echo "ENV"
           echo $APPBUILDER_ENV
+          echo "ACCESS_TOKEN"
+          echo $ACCESS_TOKEN
+          echo "APPBUILDER_REPO_SEC"
+          echo $APPBUILDER_REPO_SEC
