@@ -21,6 +21,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       APPBUILDER_TOKEN: my_token
+      APPBUILDER_SECRET: ${{ secrets.APPBUILDER_SECRET }}
+      APPBUILDER_ENV: ${{ vars.APPBUILDER_ENV }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -42,3 +44,7 @@ jobs:
           echo "--------------------"
           echo "Special Env:"
           echo $APPBUILDER_TOKEN
+          echo "SECRET"
+          echo $APPBUILDER_SECRET
+          echo "ENV"
+          echo $APPBUILDER_ENV
